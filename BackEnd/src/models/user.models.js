@@ -30,8 +30,10 @@ const userSchema  = new mongoose.Schema({
         skills:[{type:String}],
         resume:{type:String}, //Here will we upload link of resume and link will be from cloudinary
         resumeOriginalName:{type:String},
-        company:{type:mongoose.Schema.Types.ObjectId},
-        ref:"Company",
+        company:{type:mongoose.Schema.Types.ObjectId,
+            ref:"CompanyDetails"
+        },
+        
         profilePhoto:{
             type:String,
             default:""
